@@ -1,0 +1,8 @@
+# LiDAR PCD Tool v1.0 
+# Python 3.9 / 3.10 / 3.11 on Windows
+#
+open3d>=0.17.0
+numpy>=1.23.0
+scipy>=1.9.0
+tqdm>=4.64.0
+matplotlib>=3.6.0
