@@ -50,44 +50,17 @@ The following comparison uses the [DynamicMap Benchmark semindoor sequence](http
 
 ## Quick Start
 
-```bash
-pip install open3d numpy scipy
-```
-
 **Training (map building):**
 ```bash
 python lidar_train.py
 # Select PCD folder → choose Mode C → Start
 ```
-
 **Visualisation & Analysis:**
 ```bash
 python lidar_visualize.py
 # Load the output .pcd → Viewer / Editor / Analysis tabs
 ```
-
 **Evaluate against ground truth:**
 ```bash
 python eval_pcd.py aligned_map.pcd gt_map.pcd --heatmap --histogram
 ```
-
----
-
-## File Structure
-
-```
-.
-├── lidar_train.py        # Map building GUI (Modes A / B / C)
-├── lidar_visualize.py    # Viewer + Editor + Structural Analysis GUI
-├── eval_pcd.py           # Quantitative evaluation between two .pcd file
-├── rename_pcd.py         # Utility: rename arbitrary PCD files to expected format
-└── assets/               # Screenshots for README
-```
-
----
-
-## References
-
-- Zhou et al., *Fast Global Registration*, ECCV 2016
-- Segal et al., *Generalized ICP*, RSS 2009
-- DynamicMap Benchmark — https://github.com/KTH-RPL/DynamicMap_Benchmark
