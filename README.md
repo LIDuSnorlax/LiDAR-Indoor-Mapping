@@ -31,7 +31,7 @@ Instead of aligning each frame against only its predecessor, each new frame is r
 
 ## Results
 
-The following comparison uses the [DynamicMap Benchmark semindoor sequence](https://zenodo.org/records/10886629) (960 frames, VLP-16).
+The following comparison uses the [Dynamic Mapping Benchmark]([https://zenodo.org/records/10886629](https://kth-rpl.github.io/DynamicMap_Benchmark/data/)) (VLP-64).
 
 | | No Registration (raw stacked) | Mode A (FGR+GICP) | Mode C (Submap+Loop) |
 |---|---|---|---|
@@ -42,9 +42,11 @@ The following comparison uses the [DynamicMap Benchmark semindoor sequence](http
 
 **Visual comparison:**
 
-| Raw frames stacked | Mode C output |
+| GT | Mode C output |
 |---|---|
-| ![before](assets/before.png) | ![after](assets/after.png) |
+| ![GT](assets/smalltwon.png) | ![Out Put](assets/smalltown.png) |
+| ![GT](assets/smalltown2gt.png) | ![Out Put](assets/smalltown2.png) |
+|![Comparation](assets/error.png)|
 
 ---
 
