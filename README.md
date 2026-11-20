@@ -42,12 +42,12 @@ The following comparison uses the [Dynamic Mapping Benchmark](https://kth-rpl.gi
 
 | GT | Mode C output |
 |---|---|
-| ![smalltown GT](assets/smalltwon.png) | ![smalltown Mode C](assets/smalltown.png) |
-| ![smalltown2 GT](assets/smalltown2gt.png) | ![smalltown2 Mode C](assets/smalltown2.png) |
+| ![smalltown GT](assets/smalltwon.PNG) | ![smalltown Mode C](assets/smalltown.PNG) |
+| ![smalltown2 GT](assets/smalltown2gt.PNG) | ![smalltown2 Mode C](assets/smalltown2.PNG) |
 
 **Error heatmap:**
 
-![Error Heatmap](assets/error.png)
+![Error Heatmap](assets/error.PNG)
 
 ---
 
