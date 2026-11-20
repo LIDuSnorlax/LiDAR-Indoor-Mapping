@@ -6,15 +6,33 @@
 
 ## Background
 
-Most LiDAR SLAM pipelines assume access to an initial pose guess — typically from IMU integration or wheel encoders — to seed the frame-to-frame registration. This works well when sensor fusion hardware is available, but fails in minimal setups (handheld scanners, low-cost robots, retrofitted systems).
+Most LiDAR SLAM pipelines rely on an initial pose guess — typically from IMU integration or
+wheel encoders — to seed frame-to-frame registration. In practice, this assumption often breaks down:
 
-This project answers a simpler question:
+- **Unreliable initial poses**: IMU drift, magnetic interference, or poor calibration can
+  produce initial quaternions that are significantly off, causing cascading alignment errors
+  that no downstream ICP step can recover from.
+- **Missing initial poses entirely**: Handheld scanners, low-cost robots, and retrofitted
+  systems frequently lack the sensor fusion hardware needed to generate a pose prior at all.
 
-> *Given only a sequence of raw LiDAR frames, how accurately can we reconstruct an indoor map?*
+Naively stacking frames with a flawed or absent pose prior produces the kind of structural
+collapse shown on the left below — walls fold into each other, corridors smear, and the
+map is unusable.
 
-The approach relies entirely on **point cloud geometry** — no external pose information at any stage.
+This project treats the initial pose as **untrusted or unavailable**, and answers the question:
+
+> *Given only a sequence of raw LiDAR frames, how accurately can we reconstruct an indoor
+> map — using point cloud geometry alone?*
+
+The approach relies entirely on **geometric features extracted from the scans themselves** —
+FPFH descriptors, plane constraints, and submap-based registration — with no external pose
+information at any stage.
 
 ---
+
+| Initial pose error (naive stacking) | Mode C — geometry only |
+|---|---|
+| ![Naive init result](assets/before.PNG) | ![Mode C result](assets/1.PNG) |
 
 ## What Makes This Different
 
