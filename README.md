@@ -31,22 +31,23 @@ Instead of aligning each frame against only its predecessor, each new frame is r
 
 ## Results
 
-The following comparison uses the [Dynamic Mapping Benchmark]([https://zenodo.org/records/10886629](https://kth-rpl.github.io/DynamicMap_Benchmark/data/)) (VLP-64).
+The following comparison uses the [Dynamic Mapping Benchmark](https://kth-rpl.github.io/DynamicMap_Benchmark/data/) (VLP-64).
 
 | | No Registration (raw stacked) | Mode A (FGR+GICP) | Mode C (Submap+Loop) |
 |---|---|---|---|
-| Chamfer Distance ↓ | — | ~0.08m | ~0.03m |
-| F1 @ 0.1m ↑ | — | ~0.71 | ~0.89 |
-
-*(replace with your actual numbers after running eval_pcd.py)*
+| Chamfer Distance ↓ | ~0.46 | ~0.11m | ~0.08m |
+| F1 @ 0.1m ↑ | ~0.45 | ~0.71 | ~0.89 |
 
 **Visual comparison:**
 
 | GT | Mode C output |
 |---|---|
-| !assets/smalltwon.png | !assets/smalltown.png |
-| !assets/smalltown2gt.png| !assets/smalltown2.png|
-|!assets/error.png|
+| ![smalltown GT](assets/smalltwon.png) | ![smalltown Mode C](assets/smalltown.png) |
+| ![smalltown2 GT](assets/smalltown2gt.png) | ![smalltown2 Mode C](assets/smalltown2.png) |
+
+**Error heatmap:**
+
+![Error Heatmap](assets/error.png)
 
 ---
 
