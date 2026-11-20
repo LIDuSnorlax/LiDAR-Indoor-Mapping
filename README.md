@@ -44,9 +44,9 @@ The following comparison uses the [Dynamic Mapping Benchmark]([https://zenodo.or
 
 | GT | Mode C output |
 |---|---|
-| ![GT](assets/smalltwon.png) | ![Out Put](assets/smalltown.png) |
-| ![GT](assets/smalltown2gt.png) | ![Out Put](assets/smalltown2.png) |
-|![Comparation](assets/error.png)|
+| !assets/smalltwon.png | !assets/smalltown.png |
+| !assets/smalltown2gt.png| !assets/smalltown2.png|
+|!assets/error.png|
 
 ---
 
